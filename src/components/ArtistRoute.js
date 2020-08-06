@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 const ArtistRoute = () => {
-  return <Main>Hello</Main>;
+  const accessToken = useSelector((state) => state.auth.token);
+  return accessToken;
 };
-
-const Main = styled.div``;
 
 export default ArtistRoute;
